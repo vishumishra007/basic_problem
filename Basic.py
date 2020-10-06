@@ -7,11 +7,11 @@ def city_cont(lis):
         x = x + k
         if x>n:
             x = x%k
-            try:
-                reach.index(x)
-                return('NO')
-            except:                
-                reach.append(x)
+            if x in reach:
+                return 'NO'
+            else :
+                return 'YES'
+    return 'NO'
                 
 T = int(input())
 while(T>0):
